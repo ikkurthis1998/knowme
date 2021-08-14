@@ -27,17 +27,23 @@ var quiz = [
   {
     question: "Who\'s my favourite avenger? ",
     answer: "iron man"
-  }
+  },{
+    question: "Which phone do I use? ",
+    answer: "iphone se"
+  },{
+    question: " What is my profession? ",
+    answer: "web developer"
+  },
 ]
 
 var highscores = [
   {
     name: "Sree",
-    score: 3
+    score: 5
   },
   {
     name: "Karthik",
-    score: 2
+    score: 4
   }
 ]
 
@@ -57,7 +63,7 @@ function play(quiz) {
 }
 
 function game() {
-  for(var i = 0; i < 3; i++) {
+  for(var i = 0; i < 5; i++) {
     play(quiz[i]);
   }
 }
@@ -65,7 +71,7 @@ function game() {
 function final() {
   console.log('');
   console.log('Final Score: ' + score);
-  if (score === 3) {
+  if (score === 5) {
     console.log('Congrats, you got one of the top scores!');
     console.log('----------------------');
     console.log('');
@@ -75,7 +81,7 @@ function final() {
     console.log(username + ' ' + score);
     console.log(highscores[1].name + ' ' + highscores[1].score);
     console.log('-------------------------------------');
-  } else if (score === 2) {
+  } else if (score === 4) {
     console.log('Congrats, you scored well!');
     console.log('----------------------');
     console.log('');
@@ -85,7 +91,7 @@ function final() {
     console.log(username + ' ' + score);
     console.log(highscores[1].name + ' ' + highscores[1].score);
     console.log('-------------------------------------');
-  } else if (score === 1) {
+  } else if (score === 3 || score === 2) {
     console.log('Huh, You don\'t know me that well');
     console.log('----------------------');
     console.log('');
@@ -95,7 +101,7 @@ function final() {
     console.log(highscores[1].name + ' ' + highscores[1].score);
     console.log(username + ' ' + score);
     console.log('-------------------------------------');
-  } else if (score === 0) {
+  } else if (score === 1 || score === 0) {
     console.log('Do you even know me?');
     console.log('----------------------');
     console.log('');
